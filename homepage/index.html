@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- These should go in site furniture -->
+  <title>Homepage</title>
+   <meta charset="UTF-8">
+   <!-- Where SEO content goes -->
+   <meta name="description" content="Homepage">
+   <meta name="keywords" content="Homepage">
+   <meta name="author" content="company">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <style>
+    @font-face {
+      font-family: 'Akkurat';
+      src: url('font/Akkurat.eot'); /* IE9 Compat Modes */
+      src: url('font/Akkurat.woff2') format('woff2'), /* Super Modern Browsers */
+           url('font/Akkurat.woff') format('woff'), /* Pretty Modern Browsers */
+           url('font/Akkurat.ttf')  format('truetype'), /* Safari, Android, iOS */
+           url('font/Akkurat.svg#svgFontName') format('svg'); /* Legacy iOS */
+    }
+
+    .item__count{
+      position: absolute;
+      top: 5px;
+	  right:4px;
+      font-size: 9px;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Akkurat, "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      letter-spacing: 0.1em;
+      font-size: 12px;
+    }
+    img{
+      border: none;
+    }
+    a {
+      text-decoration: none;
+      color: #010101;
+      cursor: pointer;
+    }
+    ul{
+      list-style: none;
+    }
+    .clear {
+      clear:both;
+    }
+    /* header style */
+    header{
+      padding: 30px 0;
+      position: relative;
+    }
+
+    .header__logo{
+      top: 30px;
+    }
+
+    .header__logo--link{
+      background: url('images/logo__black.png') no-repeat;
+      height: 12px;
+      display: block;
+      margin: 0 auto;
+      width: 161px;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+    }
+
+    .header__nav--img{
+      background: url('images/nav__icon.png') no-repeat;
+      background-size:50% 50%;
+      position: absolute;
+      left: 40px;
+      top: 31px;
+      height: 22px;
+      width: 29px;
+      cursor: pointer;
+    }
+
+    .header__nav--bag{
+      background: url('images/shoppingbag__icon.png') no-repeat;
+      background-size: 50% 50%;
+      position: absolute;
+      right: 40px;
+      top: 28px;
+      height: 34px;
+      width: 31px;
+      cursor: pointer;
+    }
+    .dropdown{
+      display: none;
+    }
+
+    /* page container style */
+
+    .hero__image{
+      background: url('images/hero__image.jpg') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100vh;
+    }
+    .promos{
+      padding-top:20px;
+    }
+
+    .promos a{
+      display: block;
+      text-align: center;
+    }
+
+    .promos {
+      padding-top: 35px;
+    }
+
+    .promos.promos__top {
+      padding-top: 20px;
+    }
+
+    .promos__block{
+      width: 88%;
+      margin:0 auto;
+    }
+
+    .promos__block:nth-child(2){
+      padding-top: 35px;
+    }
+
+    .promo__img{
+      display: block;
+      margin: 0 0 20px 0;
+      max-width: 100%;
+    }
+    .promos__btm .promos__block{
+      width:100%;
+    }
+
+    /* footer style */
+    footer{
+      padding-top:40px;
+    }
+    .footer__links{
+      padding: 40px 0;
+    }
+
+    .link:first-child{
+      padding:0;
+    }
+    .link{
+      display: block;
+      text-align: center;
+      padding: 25px 0 0 0;
+    }
+    .link.signup{
+      text-align: right;
+      border-bottom: 1px solid black;
+      width: 88%;
+      margin:0 auto;
+      padding: 0 0 8px 0;
+    }
+    /* smart phones style */
+    @media only screen
+    and (max-width: 667px){
+      /* smart phones page container style*/
+      .hero__image{
+        height: 92vh;
+      }
+	  .header__nav--img{
+		  left: 20px;
+		  top: 20px;
+	  }
+	  header{
+		  padding: 19px 0;
+	  }
+	  .header__nav--bag{
+		  top: 16px;
+		  right: 20px;
+		  background-position:right top;
+	  }
+    }
+    /* tablet */
+    @media only screen
+    and (min-width: 667px){
+      /* tablet page container style*/
+      .promos__top .promo__block--float{
+        float: right;
+        padding-right: 8.333%;
+        padding-top:0;
+      }
+      .item__count {
+        color: white;
+      }
+      .promos__top .promos__block{
+        width: 40%;
+        margin: 0;
+      }
+      .promos__block:first-child.promo__block--float{
+        width: 35%;
+        float: left;
+        padding: 42px 0 0 8.333%;
+      }
+      .promos__btm .promos__block{
+        width:46%;
+      }
+      .promos{
+        padding-top: 60px;
+      }
+      .promos.promos__top{
+        padding-top: 60px;
+      }
+      /* tablet footer style*/
+      footer {
+        padding-top: 80px;
+      }
+      footer .link.signup{
+        float: right;
+        width: 225px;
+        margin-right: 40px;
+      }
+      footer .link, footer .link.first{
+        float: left;
+        padding-top: 0;
+        padding-right: 5%;
+      }
+      footer .footer__links{
+        float: left;
+        padding-top: 0;
+        padding-left: 40px;
+        width: 40%;
+      }
+    }
+    /* tablet header style */
+    @media only screen
+    and (min-width: 667px) and (max-width: 768px){
+      header{
+        position: absolute;
+        width: 100%;
+      }
+      .header__logo{
+        position: absolute;
+        width: 100%;
+      }
+      .header__logo--link{
+        background: url('images/logo__white.png') no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+      }
+      .header__nav--img {
+        background: url('images/nav__icon--white.png') no-repeat;
+        background-size: 50% 50%;
+        left: 40px;
+      }
+      .header__nav--bag {
+        background: url('images/shoppingbag__icon--white.png') no-repeat;
+        background-size: 50% 50%;
+        right: 40px;
+      }
+    }
+    @media only screen
+    and (min-width: 769px){
+      header{
+        position: absolute;
+        width: 100%;
+      }
+      .header__logo{
+        position: absolute;
+        width: 100%;
+      }
+      .header__logo--link{
+        background: url('images/logo__white.png') no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+      }
+      .dropdown{
+        display: block;
+        position: absolute;
+        top: 17px;
+        padding: 0;
+        z-index: 9;
+      }
+      .dropdown li{
+        float: left;
+        padding-right: 20px;
+      }
+      .dropdown li a{
+        color: white;
+      }
+
+      .header__nav--right{
+        right:40px;
+      }
+      .header__nav--left{
+        left:40px;
+      }
+      .header__nav--img, .header__nav--bag{
+        display: none;
+      }
+      .line{
+        border-bottom: 1px solid white;
+        margin: 0 1px;
+        padding-top: 3px;
+      }
+    }
+  </style>
+  <header>
+    <div class="header__nav--img"></div>
+    <ul class="header__nav--left dropdown">
+      <li><a>Dresses</a></li>
+      <li><a>Skirt</a></li>
+      <li><a>Collection</a></li>
+    </ul>
+    <div class="header__logo"><a class="header__logo--link"></a></div>
+    <ul class="header__nav--right dropdown">
+      <li>
+        <a class="country__select">UK</a>
+        <div class="line"></div>
+      </li>
+      <li><a>Account</a></li>
+      <li><a>Bag (0)</a></li>
+    </ul>
+    <div class="header__nav--bag"><div class="item__count">0</div></div>
+  </header>
+  <div class="clear"></div>
+  <div id="homepage">
+    <div class="hero__image"></div>
+    <div class="promos__top promos">
+      <div class="promos__block promo__block--float">
+        <a href="#">
+          <img class="promo__img" alt="Shop Shirts" src="images/promo__1.jpg"/>
+          Shop Shirts
+        </a>
+      </div>
+      <div class="promos__block promo__block--float">
+        <a href="#">
+          <img class="promo__img" alt="Shop Dresses" src="images/promo__2.jpg"/>
+          Shop Dresses
+        </a>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="promos__btm promos">
+      <div class="promos__block">
+        <a href="#">
+          <img class="promo__img" alt="The New Craftsman" src="images/promo__3.jpg"/>
+          The New Craftsman
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <div class="link signup"><a href="#">Sign up</a></div>
+    <div class="footer__links">
+      <div class="link first"><a href="#">About</a></div>
+      <div class="link"><a href="#">Terms</a></div>
+      <div class="link"><a href="#">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
